@@ -1,9 +1,9 @@
-# CCKS-2020-Task4-
+# CCKS-2020-Task4
 面向金融领域的小样本跨类迁移事件抽取 第三名 方案及代码
 > ## 我们在 CCKS2020 大会分享的 技术方案PPT分享[于此](https://pan.baidu.com/s/1ulJXAMVZua7lcHy8K57ZMQ)提取码：bfd1 
 
 ## 环境安装
-依赖文件路径code/conda.txt  和  code/pip.txt
+> 依赖文件路径code/conda.txt  和  code/pip.txt
 ### 1.conda创建python==3.8环境以及依赖包:  conda env create -f conda.txt
 ### 2.Pip安装依赖包： pip install -r pip.txt
 ### 重要说明：经过试验表明，环境的匹配要完全一致，否则会影响结果的复现
