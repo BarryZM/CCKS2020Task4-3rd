@@ -1,0 +1,577 @@
+2020-09-14 04:08:01,462:INFO: device: cuda
+2020-09-14 04:08:01,463:INFO: seed: 2020
+2020-09-14 04:08:01,463:INFO: digit2zero: False
+2020-09-14 04:08:01,463:INFO: dataset: data
+2020-09-14 04:08:01,463:INFO: optimizer: sgd
+2020-09-14 04:08:01,463:INFO: learning_rate: 5e-05
+2020-09-14 04:08:01,463:INFO: momentum: 0.0
+2020-09-14 04:08:01,463:INFO: l2: 1e-08
+2020-09-14 04:08:01,463:INFO: lr_decay: 0
+2020-09-14 04:08:01,463:INFO: batch_size: 2
+2020-09-14 04:08:01,463:INFO: num_epochs: 15
+2020-09-14 04:08:01,463:INFO: train_num: -1
+2020-09-14 04:08:01,463:INFO: dev_num: -1
+2020-09-14 04:08:01,463:INFO: num_outer_iterations: 10
+2020-09-14 04:08:01,463:INFO: train_or_predict: 1
+2020-09-14 04:08:01,463:INFO: bert_model_dir: chinese_roberta_wwm_ext_pytorch
+2020-09-14 04:08:01,463:INFO: max_len: 400
+2020-09-14 04:08:01,463:INFO: full_finetuning: True
+2020-09-14 04:08:01,463:INFO: clip_grad: 5
+2020-09-14 04:08:01,463:INFO: gradient_accumulation_steps: 4
+2020-09-14 04:08:01,463:INFO: model_folder: saved_model_roberta_zb_1_1
+2020-09-14 04:08:01,463:INFO: device_num: 2
+2020-09-14 04:08:01,463:INFO: type: 中标
+2020-09-14 04:08:01,463:INFO: 
+
+2020-09-14 04:08:01,463:INFO: Loading the datasets...
+2020-09-14 04:08:01,577:INFO: Building label idx ...
+2020-09-14 04:08:01,579:INFO: [Training Info] number of instances: 161
+2020-09-14 04:08:05,228:INFO: Initialized from pre-trained Model
+2020-09-14 04:08:05,228:INFO: [Training Info] The model will be saved to: saved_model_roberta_zb_1_1
+2020-09-14 04:08:05,228:INFO: loading weights file ./pretrained/final_bert_crf/pytorch_model.bin
+2020-09-14 04:08:11,774:WARNING: Some weights of the model checkpoint at ./pretrained/final_bert_crf/ were not used when initializing BertCRF: ['classifier_pre.weight', 'classifier_pre.bias', 'inferencer_pre.transition']
+- This IS expected if you are initializing BertCRF from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPretraining model).
+- This IS NOT expected if you are initializing BertCRF from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2020-09-14 04:08:11,774:WARNING: Some weights of BertCRF were not initialized from the model checkpoint at ./pretrained/final_bert_crf/ and are newly initialized: ['classifier.weight', 'classifier.bias', 'inferencer.transition']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+2020-09-14 04:08:11,954:INFO: full finetuning
+2020-09-14 04:08:25,774:INFO: Epoch 1: 25.30806, Time is 13.82s
+2020-09-14 04:08:26,145:INFO: [dev set] Precision: 83.75, Recall: 83.75, F1: 83.75
+2020-09-14 04:08:26,145:INFO: saving the best model...
+2020-09-14 04:08:43,755:INFO: Epoch 2: 4.58669, Time is 12.97s
+2020-09-14 04:08:44,154:INFO: [dev set] Precision: 87.65, Recall: 88.75, F1: 88.20
+2020-09-14 04:08:44,154:INFO: saving the best model...
+2020-09-14 04:09:03,185:INFO: Epoch 3: 1.92880, Time is 12.94s
+2020-09-14 04:09:03,547:INFO: [dev set] Precision: 88.75, Recall: 88.75, F1: 88.75
+2020-09-14 04:09:03,547:INFO: saving the best model...
+2020-09-14 04:09:23,229:INFO: Epoch 4: 1.42210, Time is 12.95s
+2020-09-14 04:09:23,600:INFO: [dev set] Precision: 88.24, Recall: 75.00, F1: 81.08
+2020-09-14 04:09:36,463:INFO: Epoch 5: 0.69958, Time is 12.86s
+2020-09-14 04:09:36,830:INFO: [dev set] Precision: 82.93, Recall: 85.00, F1: 83.95
+2020-09-14 04:09:49,853:INFO: Epoch 6: 0.71598, Time is 13.02s
+2020-09-14 04:09:50,216:INFO: [dev set] Precision: 87.50, Recall: 87.50, F1: 87.50
+2020-09-14 04:10:03,054:INFO: Epoch 7: 0.42512, Time is 12.83s
+2020-09-14 04:10:03,414:INFO: [dev set] Precision: 90.67, Recall: 85.00, F1: 87.74
+2020-09-14 04:10:16,346:INFO: Epoch 8: 0.31271, Time is 12.93s
+2020-09-14 04:10:16,702:INFO: [dev set] Precision: 84.88, Recall: 91.25, F1: 87.95
+2020-09-14 04:10:29,562:INFO: Epoch 9: 0.42403, Time is 12.86s
+2020-09-14 04:10:29,924:INFO: [dev set] Precision: 86.08, Recall: 85.00, F1: 85.53
+2020-09-14 04:10:42,073:INFO: Epoch 10: 0.09002, Time is 12.15s
+2020-09-14 04:10:42,435:INFO: [dev set] Precision: 85.90, Recall: 83.75, F1: 84.81
+2020-09-14 04:10:53,780:INFO: Epoch 11: 0.18785, Time is 11.34s
+2020-09-14 04:10:54,149:INFO: [dev set] Precision: 85.00, Recall: 85.00, F1: 85.00
+2020-09-14 04:11:05,502:INFO: Epoch 12: 0.07298, Time is 11.35s
+2020-09-14 04:11:05,863:INFO: [dev set] Precision: 85.00, Recall: 85.00, F1: 85.00
+2020-09-14 04:11:17,207:INFO: Epoch 13: 0.00232, Time is 11.34s
+2020-09-14 04:11:17,572:INFO: [dev set] Precision: 86.08, Recall: 85.00, F1: 85.53
+2020-09-14 04:11:29,748:INFO: Epoch 14: 0.00074, Time is 12.17s
+2020-09-14 04:11:30,118:INFO: [dev set] Precision: 84.81, Recall: 83.75, F1: 84.28
+2020-09-14 04:11:42,918:INFO: Epoch 15: 0.13992, Time is 12.80s
+2020-09-14 04:11:43,285:INFO: [dev set] Precision: 83.95, Recall: 85.00, F1: 84.47
+2020-09-14 04:11:45,074:INFO: 
+
+2020-09-14 04:11:45,476:INFO: [dev set] Precision: 88.75, Recall: 88.75, F1: 88.75
+2020-09-14 12:10:42,070:INFO: device: cuda
+2020-09-14 12:10:42,070:INFO: seed: 2020
+2020-09-14 12:10:42,070:INFO: digit2zero: False
+2020-09-14 12:10:42,070:INFO: dataset: data
+2020-09-14 12:10:42,070:INFO: optimizer: sgd
+2020-09-14 12:10:42,070:INFO: learning_rate: 5e-05
+2020-09-14 12:10:42,070:INFO: momentum: 0.0
+2020-09-14 12:10:42,070:INFO: l2: 1e-08
+2020-09-14 12:10:42,070:INFO: lr_decay: 0
+2020-09-14 12:10:42,070:INFO: batch_size: 2
+2020-09-14 12:10:42,070:INFO: num_epochs: 15
+2020-09-14 12:10:42,070:INFO: train_num: -1
+2020-09-14 12:10:42,070:INFO: dev_num: -1
+2020-09-14 12:10:42,070:INFO: num_outer_iterations: 10
+2020-09-14 12:10:42,070:INFO: train_or_predict: 1
+2020-09-14 12:10:42,070:INFO: bert_model_dir: chinese_roberta_wwm_ext_pytorch
+2020-09-14 12:10:42,070:INFO: max_len: 400
+2020-09-14 12:10:42,070:INFO: full_finetuning: True
+2020-09-14 12:10:42,070:INFO: clip_grad: 5
+2020-09-14 12:10:42,070:INFO: gradient_accumulation_steps: 4
+2020-09-14 12:10:42,070:INFO: model_folder: saved_model_roberta_zb_1_1
+2020-09-14 12:10:42,070:INFO: device_num: 0
+2020-09-14 12:10:42,070:INFO: type: 中标
+2020-09-14 12:10:42,070:INFO: 
+
+2020-09-14 12:10:42,070:INFO: Loading the datasets...
+2020-09-14 12:10:42,186:INFO: Building label idx ...
+2020-09-14 12:10:42,188:INFO: [Training Info] number of instances: 161
+2020-09-14 12:10:45,104:INFO: Initialized from pre-trained Model
+2020-09-14 12:10:45,104:INFO: [Training Info] The model will be saved to: saved_model_roberta_zb_1_1
+2020-09-14 12:10:45,105:INFO: loading weights file ./pretrained/final_bert_crf/pytorch_model.bin
+2020-09-14 12:10:51,868:WARNING: Some weights of the model checkpoint at ./pretrained/final_bert_crf/ were not used when initializing BertCRF: ['classifier_pre.weight', 'classifier_pre.bias', 'inferencer_pre.transition']
+- This IS expected if you are initializing BertCRF from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPretraining model).
+- This IS NOT expected if you are initializing BertCRF from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2020-09-14 12:10:51,868:WARNING: Some weights of BertCRF were not initialized from the model checkpoint at ./pretrained/final_bert_crf/ and are newly initialized: ['classifier.weight', 'classifier.bias', 'inferencer.transition']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+2020-09-14 12:10:52,061:INFO: full finetuning
+2020-09-14 12:11:06,296:INFO: Epoch 1: 18.61789, Time is 14.23s
+2020-09-14 12:11:06,663:INFO: [dev set] Precision: 78.41, Recall: 86.25, F1: 82.14
+2020-09-14 12:11:06,663:INFO: saving the best model...
+2020-09-14 12:11:25,407:INFO: Epoch 2: 2.73088, Time is 13.06s
+2020-09-14 12:11:25,768:INFO: [dev set] Precision: 76.40, Recall: 85.00, F1: 80.47
+2020-09-14 12:11:38,688:INFO: Epoch 3: 1.74135, Time is 12.92s
+2020-09-14 12:11:39,047:INFO: [dev set] Precision: 78.82, Recall: 83.75, F1: 81.21
+2020-09-14 12:11:51,951:INFO: Epoch 4: 1.25116, Time is 12.90s
+2020-09-14 12:11:52,322:INFO: [dev set] Precision: 78.02, Recall: 88.75, F1: 83.04
+2020-09-14 12:11:52,322:INFO: saving the best model...
+2020-09-14 12:12:11,844:INFO: Epoch 5: 1.39172, Time is 13.07s
+2020-09-14 12:12:12,207:INFO: [dev set] Precision: 82.50, Recall: 82.50, F1: 82.50
+2020-09-14 12:12:25,303:INFO: Epoch 6: 0.67145, Time is 13.09s
+2020-09-14 12:12:25,669:INFO: [dev set] Precision: 82.72, Recall: 83.75, F1: 83.23
+2020-09-14 12:12:25,670:INFO: saving the best model...
+2020-09-14 12:12:45,022:INFO: Epoch 7: 1.27668, Time is 13.19s
+2020-09-14 12:12:45,385:INFO: [dev set] Precision: 81.18, Recall: 86.25, F1: 83.64
+2020-09-14 12:12:45,385:INFO: saving the best model...
+2020-09-14 12:13:04,727:INFO: Epoch 8: 0.54646, Time is 13.04s
+2020-09-14 12:13:05,095:INFO: [dev set] Precision: 82.72, Recall: 83.75, F1: 83.23
+2020-09-14 12:13:18,053:INFO: Epoch 9: 0.37376, Time is 12.95s
+2020-09-14 12:13:18,416:INFO: [dev set] Precision: 84.34, Recall: 87.50, F1: 85.89
+2020-09-14 12:13:18,416:INFO: saving the best model...
+2020-09-14 12:13:37,131:INFO: Epoch 10: 0.31348, Time is 12.39s
+2020-09-14 12:13:37,493:INFO: [dev set] Precision: 83.33, Recall: 87.50, F1: 85.37
+2020-09-14 12:13:49,745:INFO: Epoch 11: 0.12913, Time is 12.25s
+2020-09-14 12:13:50,112:INFO: [dev set] Precision: 83.13, Recall: 86.25, F1: 84.66
+2020-09-14 12:14:03,107:INFO: Epoch 12: 0.26935, Time is 12.99s
+2020-09-14 12:14:03,473:INFO: [dev set] Precision: 81.82, Recall: 90.00, F1: 85.71
+2020-09-14 12:14:16,548:INFO: Epoch 13: 0.13313, Time is 13.07s
+2020-09-14 12:14:16,911:INFO: [dev set] Precision: 81.61, Recall: 88.75, F1: 85.03
+2020-09-14 12:14:29,849:INFO: Epoch 14: 0.46412, Time is 12.93s
+2020-09-14 12:14:30,220:INFO: [dev set] Precision: 84.71, Recall: 90.00, F1: 87.27
+2020-09-14 12:14:30,221:INFO: saving the best model...
+2020-09-14 12:14:48,640:INFO: Epoch 15: 0.03573, Time is 12.98s
+2020-09-14 12:14:49,004:INFO: [dev set] Precision: 85.19, Recall: 86.25, F1: 85.71
+2020-09-14 12:14:50,935:INFO: 
+
+2020-09-14 12:14:51,358:INFO: [dev set] Precision: 84.71, Recall: 90.00, F1: 87.27
+2020-09-14 12:14:51,722:INFO: [* trigger *] Precision: 100.00, Recall: 100.00, F1: 100.00
+2020-09-14 12:14:51,722:INFO: [* sub *] Precision: 95.00, Recall: 100.00, F1: 97.44
+2020-09-14 12:14:51,722:INFO: [* obj *] Precision: 59.09, Recall: 65.00, F1: 61.90
+2020-09-14 12:14:51,722:INFO: [* amount *] Precision: 78.57, Recall: 91.67, F1: 84.62
+2020-09-14 12:14:51,722:INFO: [* date *] Precision: 100.00, Recall: 100.00, F1: 100.00
+2020-09-14 12:14:51,723:INFO: 
+
+
+2020-09-17 19:43:52,213:INFO: device: cuda
+2020-09-17 19:43:52,216:INFO: seed: 2020
+2020-09-17 19:43:52,216:INFO: digit2zero: False
+2020-09-17 19:43:52,216:INFO: dataset: data
+2020-09-17 19:43:52,216:INFO: optimizer: sgd
+2020-09-17 19:43:52,216:INFO: learning_rate: 5e-05
+2020-09-17 19:43:52,216:INFO: momentum: 0.0
+2020-09-17 19:43:52,216:INFO: l2: 1e-08
+2020-09-17 19:43:52,216:INFO: lr_decay: 0
+2020-09-17 19:43:52,216:INFO: batch_size: 2
+2020-09-17 19:43:52,216:INFO: num_epochs: 15
+2020-09-17 19:43:52,216:INFO: train_num: -1
+2020-09-17 19:43:52,216:INFO: dev_num: -1
+2020-09-17 19:43:52,216:INFO: num_outer_iterations: 10
+2020-09-17 19:43:52,216:INFO: train_or_predict: 1
+2020-09-17 19:43:52,216:INFO: ensemble: 0
+2020-09-17 19:43:52,216:INFO: bert_model_dir: chinese_roberta_wwm_ext_pytorch
+2020-09-17 19:43:52,216:INFO: max_len: 400
+2020-09-17 19:43:52,216:INFO: full_finetuning: True
+2020-09-17 19:43:52,216:INFO: clip_grad: 5
+2020-09-17 19:43:52,216:INFO: gradient_accumulation_steps: 4
+2020-09-17 19:43:52,216:INFO: model_folder: saved_model_roberta_zb_1_1
+2020-09-17 19:43:52,216:INFO: device_num: 2
+2020-09-17 19:43:52,216:INFO: type: 中标
+2020-09-17 19:43:52,216:INFO: 
+
+2020-09-17 19:43:52,216:INFO: Loading the datasets...
+2020-09-17 19:43:52,332:INFO: Building label idx ...
+2020-09-17 19:43:52,334:INFO: [Training Info] number of instances: 161
+2020-09-17 19:43:54,585:INFO: Initialized from pre-trained Model
+2020-09-17 19:43:54,585:INFO: [Training Info] The model will be saved to: saved_model_roberta_zb_1_1
+2020-09-17 19:43:54,585:INFO: loading weights file ./pretrained/final_bert_crf/pytorch_model.bin
+2020-09-17 19:44:01,546:WARNING: Some weights of the model checkpoint at ./pretrained/final_bert_crf/ were not used when initializing BertCRF: ['classifier_pre.weight', 'classifier_pre.bias', 'inferencer_pre.transition']
+- This IS expected if you are initializing BertCRF from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPretraining model).
+- This IS NOT expected if you are initializing BertCRF from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2020-09-17 19:44:01,546:WARNING: Some weights of BertCRF were not initialized from the model checkpoint at ./pretrained/final_bert_crf/ and are newly initialized: ['classifier.weight', 'classifier.bias', 'inferencer.transition']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+2020-09-17 19:44:01,745:INFO: full finetuning
+2020-09-17 19:44:14,829:INFO: Epoch 1: 18.58349, Time is 13.08s
+2020-09-17 19:44:15,197:INFO: [dev set] Precision: 78.41, Recall: 86.25, F1: 82.14
+2020-09-17 19:44:15,197:INFO: saving the best model...
+2020-09-17 19:44:35,043:INFO: Epoch 2: 2.96985, Time is 12.95s
+2020-09-17 19:44:35,403:INFO: [dev set] Precision: 78.16, Recall: 85.00, F1: 81.44
+2020-09-17 19:44:48,463:INFO: Epoch 3: 1.41277, Time is 13.06s
+2020-09-17 19:44:48,822:INFO: [dev set] Precision: 79.31, Recall: 86.25, F1: 82.63
+2020-09-17 19:44:48,822:INFO: saving the best model...
+2020-09-17 19:45:08,280:INFO: Epoch 4: 0.81569, Time is 13.00s
+2020-09-17 19:45:08,650:INFO: [dev set] Precision: 80.25, Recall: 81.25, F1: 80.75
+2020-09-17 19:45:21,608:INFO: Epoch 5: 1.10491, Time is 12.95s
+2020-09-17 19:45:21,971:INFO: [dev set] Precision: 80.00, Recall: 85.00, F1: 82.42
+2020-09-17 19:45:34,241:INFO: Epoch 6: 0.70523, Time is 12.27s
+2020-09-17 19:45:34,621:INFO: [dev set] Precision: 87.34, Recall: 86.25, F1: 86.79
+2020-09-17 19:45:34,621:INFO: saving the best model...
+2020-09-17 19:45:54,184:INFO: Epoch 7: 0.98991, Time is 12.90s
+2020-09-17 19:45:54,548:INFO: [dev set] Precision: 85.00, Recall: 85.00, F1: 85.00
+2020-09-17 19:46:07,589:INFO: Epoch 8: 0.75597, Time is 13.04s
+2020-09-17 19:46:07,950:INFO: [dev set] Precision: 87.18, Recall: 85.00, F1: 86.08
+2020-09-17 19:46:20,449:INFO: Epoch 9: 0.44989, Time is 12.50s
+2020-09-17 19:46:20,823:INFO: [dev set] Precision: 83.72, Recall: 90.00, F1: 86.75
+2020-09-17 19:46:33,763:INFO: Epoch 10: 0.57896, Time is 12.94s
+2020-09-17 19:46:34,125:INFO: [dev set] Precision: 89.47, Recall: 85.00, F1: 87.18
+2020-09-17 19:46:34,125:INFO: saving the best model...
+2020-09-17 19:46:53,488:INFO: Epoch 11: 0.32000, Time is 12.96s
+2020-09-17 19:46:53,877:INFO: [dev set] Precision: 82.93, Recall: 85.00, F1: 83.95
+2020-09-17 19:47:05,969:INFO: Epoch 12: 0.10459, Time is 12.09s
+2020-09-17 19:47:06,330:INFO: [dev set] Precision: 81.48, Recall: 82.50, F1: 81.99
+2020-09-17 19:47:18,871:INFO: Epoch 13: 0.14222, Time is 12.54s
+2020-09-17 19:47:19,234:INFO: [dev set] Precision: 83.54, Recall: 82.50, F1: 83.02
+2020-09-17 19:47:32,042:INFO: Epoch 14: 0.10667, Time is 12.80s
+2020-09-17 19:47:32,414:INFO: [dev set] Precision: 82.93, Recall: 85.00, F1: 83.95
+2020-09-17 19:47:45,298:INFO: Epoch 15: 0.23637, Time is 12.88s
+2020-09-17 19:47:45,664:INFO: [dev set] Precision: 82.72, Recall: 83.75, F1: 83.23
+2020-09-17 19:47:47,008:INFO: 
+
+2020-09-17 19:47:47,410:INFO: [dev set] Precision: 89.47, Recall: 85.00, F1: 87.18
+2020-09-17 19:47:47,787:INFO: [* trigger *] Precision: 90.00, Recall: 94.74, F1: 92.31
+2020-09-17 19:47:47,788:INFO: [* sub *] Precision: 100.00, Recall: 100.00, F1: 100.00
+2020-09-17 19:47:47,788:INFO: [* obj *] Precision: 70.59, Recall: 60.00, F1: 64.86
+2020-09-17 19:47:47,788:INFO: [* amount *] Precision: 91.67, Recall: 91.67, F1: 91.67
+2020-09-17 19:47:47,788:INFO: [* date *] Precision: 100.00, Recall: 80.00, F1: 88.89
+2020-09-17 19:47:47,789:INFO: 
+
+
+2020-09-17 19:49:54,006:INFO: device: cuda
+2020-09-17 19:49:54,006:INFO: seed: 2020
+2020-09-17 19:49:54,006:INFO: digit2zero: False
+2020-09-17 19:49:54,006:INFO: dataset: data
+2020-09-17 19:49:54,006:INFO: optimizer: sgd
+2020-09-17 19:49:54,006:INFO: learning_rate: 2e-05
+2020-09-17 19:49:54,006:INFO: momentum: 0.0
+2020-09-17 19:49:54,006:INFO: l2: 1e-08
+2020-09-17 19:49:54,007:INFO: lr_decay: 0
+2020-09-17 19:49:54,007:INFO: batch_size: 2
+2020-09-17 19:49:54,007:INFO: num_epochs: 15
+2020-09-17 19:49:54,007:INFO: train_num: -1
+2020-09-17 19:49:54,007:INFO: dev_num: -1
+2020-09-17 19:49:54,007:INFO: num_outer_iterations: 10
+2020-09-17 19:49:54,007:INFO: train_or_predict: 1
+2020-09-17 19:49:54,007:INFO: ensemble: 0
+2020-09-17 19:49:54,007:INFO: bert_model_dir: chinese_roberta_wwm_ext_pytorch
+2020-09-17 19:49:54,007:INFO: max_len: 400
+2020-09-17 19:49:54,007:INFO: full_finetuning: True
+2020-09-17 19:49:54,007:INFO: clip_grad: 5
+2020-09-17 19:49:54,007:INFO: gradient_accumulation_steps: 4
+2020-09-17 19:49:54,007:INFO: model_folder: saved_model_roberta_zb_1_1
+2020-09-17 19:49:54,007:INFO: device_num: 2
+2020-09-17 19:49:54,007:INFO: type: 中标
+2020-09-17 19:49:54,007:INFO: 
+
+2020-09-17 19:49:54,007:INFO: Loading the datasets...
+2020-09-17 19:49:54,126:INFO: Building label idx ...
+2020-09-17 19:49:54,128:INFO: [Training Info] number of instances: 161
+2020-09-17 19:49:56,408:INFO: Initialized from pre-trained Model
+2020-09-17 19:49:56,408:INFO: [Training Info] The model will be saved to: saved_model_roberta_zb_1_1
+2020-09-17 19:49:56,408:INFO: loading weights file ./pretrained/final_bert_crf/pytorch_model.bin
+2020-09-17 19:50:03,274:WARNING: Some weights of the model checkpoint at ./pretrained/final_bert_crf/ were not used when initializing BertCRF: ['classifier_pre.weight', 'classifier_pre.bias', 'inferencer_pre.transition']
+- This IS expected if you are initializing BertCRF from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPretraining model).
+- This IS NOT expected if you are initializing BertCRF from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2020-09-17 19:50:03,274:WARNING: Some weights of BertCRF were not initialized from the model checkpoint at ./pretrained/final_bert_crf/ and are newly initialized: ['classifier.weight', 'classifier.bias', 'inferencer.transition']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+2020-09-17 19:50:03,459:INFO: full finetuning
+2020-09-17 19:50:16,676:INFO: Epoch 1: 25.18992, Time is 13.21s
+2020-09-17 19:50:17,065:INFO: [dev set] Precision: 78.82, Recall: 83.75, F1: 81.21
+2020-09-17 19:50:17,065:INFO: saving the best model...
+2020-09-17 19:50:36,384:INFO: Epoch 2: 1.07136, Time is 12.95s
+2020-09-17 19:50:36,747:INFO: [dev set] Precision: 81.93, Recall: 85.00, F1: 83.44
+2020-09-17 19:50:36,747:INFO: saving the best model...
+2020-09-17 19:50:56,418:INFO: Epoch 3: 0.68453, Time is 13.06s
+2020-09-17 19:50:56,779:INFO: [dev set] Precision: 82.14, Recall: 86.25, F1: 84.15
+2020-09-17 19:50:56,780:INFO: saving the best model...
+2020-09-17 19:51:17,361:INFO: Epoch 4: 0.76165, Time is 12.62s
+2020-09-17 19:51:17,732:INFO: [dev set] Precision: 82.93, Recall: 85.00, F1: 83.95
+2020-09-17 19:51:30,687:INFO: Epoch 5: 0.50053, Time is 12.95s
+2020-09-17 19:51:31,052:INFO: [dev set] Precision: 83.95, Recall: 85.00, F1: 84.47
+2020-09-17 19:51:31,052:INFO: saving the best model...
+2020-09-17 19:51:50,585:INFO: Epoch 6: 0.32952, Time is 12.96s
+2020-09-17 19:51:50,953:INFO: [dev set] Precision: 80.72, Recall: 83.75, F1: 82.21
+2020-09-17 19:52:03,982:INFO: Epoch 7: 0.06287, Time is 13.02s
+2020-09-17 19:52:04,349:INFO: [dev set] Precision: 83.13, Recall: 86.25, F1: 84.66
+2020-09-17 19:52:04,349:INFO: saving the best model...
+2020-09-17 19:52:25,951:INFO: Epoch 8: 0.03196, Time is 13.12s
+2020-09-17 19:52:26,340:INFO: [dev set] Precision: 86.42, Recall: 87.50, F1: 86.96
+2020-09-17 19:52:26,341:INFO: saving the best model...
+2020-09-17 19:52:47,965:INFO: Epoch 9: 0.00268, Time is 13.29s
+2020-09-17 19:52:48,351:INFO: [dev set] Precision: 82.76, Recall: 90.00, F1: 86.23
+2020-09-17 19:53:01,990:INFO: Epoch 10: 0.10489, Time is 13.64s
+2020-09-17 19:53:02,361:INFO: [dev set] Precision: 82.14, Recall: 86.25, F1: 84.15
+2020-09-17 19:53:15,791:INFO: Epoch 11: 0.00268, Time is 13.43s
+2020-09-17 19:53:16,158:INFO: [dev set] Precision: 84.15, Recall: 86.25, F1: 85.19
+2020-09-17 19:53:29,417:INFO: Epoch 12: 0.13997, Time is 13.25s
+2020-09-17 19:53:29,789:INFO: [dev set] Precision: 86.59, Recall: 88.75, F1: 87.65
+2020-09-17 19:53:29,789:INFO: saving the best model...
+2020-09-17 19:53:49,788:INFO: Epoch 13: 0.02574, Time is 13.47s
+2020-09-17 19:53:50,162:INFO: [dev set] Precision: 85.54, Recall: 88.75, F1: 87.12
+2020-09-17 19:54:03,614:INFO: Epoch 14: 0.00094, Time is 13.45s
+2020-09-17 19:54:04,002:INFO: [dev set] Precision: 85.37, Recall: 87.50, F1: 86.42
+2020-09-17 19:54:17,353:INFO: Epoch 15: 0.05244, Time is 13.35s
+2020-09-17 19:54:17,733:INFO: [dev set] Precision: 85.37, Recall: 87.50, F1: 86.42
+2020-09-17 19:54:19,887:INFO: 
+
+2020-09-17 19:54:20,336:INFO: [dev set] Precision: 86.59, Recall: 88.75, F1: 87.65
+2020-09-17 19:54:20,729:INFO: [* trigger *] Precision: 90.00, Recall: 94.74, F1: 92.31
+2020-09-17 19:54:20,729:INFO: [* sub *] Precision: 100.00, Recall: 100.00, F1: 100.00
+2020-09-17 19:54:20,729:INFO: [* obj *] Precision: 66.67, Recall: 70.00, F1: 68.29
+2020-09-17 19:54:20,729:INFO: [* amount *] Precision: 85.71, Recall: 100.00, F1: 92.31
+2020-09-17 19:54:20,730:INFO: [* date *] Precision: 100.00, Recall: 80.00, F1: 88.89
+2020-09-17 19:54:20,731:INFO: 
+
+
+2020-09-17 20:20:34,754:INFO: device: cuda
+2020-09-17 20:20:34,754:INFO: seed: 2020
+2020-09-17 20:20:34,754:INFO: digit2zero: False
+2020-09-17 20:20:34,755:INFO: dataset: data
+2020-09-17 20:20:34,755:INFO: optimizer: sgd
+2020-09-17 20:20:34,755:INFO: learning_rate: 2e-05
+2020-09-17 20:20:34,755:INFO: momentum: 0.0
+2020-09-17 20:20:34,755:INFO: l2: 1e-08
+2020-09-17 20:20:34,755:INFO: lr_decay: 0
+2020-09-17 20:20:34,755:INFO: batch_size: 2
+2020-09-17 20:20:34,755:INFO: num_epochs: 15
+2020-09-17 20:20:34,756:INFO: train_num: -1
+2020-09-17 20:20:34,756:INFO: dev_num: -1
+2020-09-17 20:20:34,756:INFO: num_outer_iterations: 10
+2020-09-17 20:20:34,756:INFO: train_or_predict: 1
+2020-09-17 20:20:34,756:INFO: ensemble: 0
+2020-09-17 20:20:34,756:INFO: bert_model_dir: chinese_roberta_wwm_ext_pytorch
+2020-09-17 20:20:34,756:INFO: max_len: 400
+2020-09-17 20:20:34,756:INFO: full_finetuning: True
+2020-09-17 20:20:34,756:INFO: clip_grad: 5
+2020-09-17 20:20:34,756:INFO: gradient_accumulation_steps: 4
+2020-09-17 20:20:34,757:INFO: model_folder: saved_model_roberta_zb_1_1
+2020-09-17 20:20:34,757:INFO: device_num: 2
+2020-09-17 20:20:34,757:INFO: type: 中标
+2020-09-17 20:20:34,757:INFO: 
+
+2020-09-17 20:20:34,757:INFO: Loading the datasets...
+2020-09-17 20:20:34,891:INFO: Building label idx ...
+2020-09-17 20:20:34,894:INFO: [Training Info] number of instances: 161
+2020-09-17 20:20:37,117:INFO: Initialized from pre-trained Model
+2020-09-17 20:20:37,117:INFO: [Training Info] The model will be saved to: saved_model_roberta_zb_1_1
+2020-09-17 20:20:37,117:INFO: loading weights file ./pretrained/final_bert_crf/pytorch_model.bin
+2020-09-17 20:20:44,191:WARNING: Some weights of the model checkpoint at ./pretrained/final_bert_crf/ were not used when initializing BertCRF: ['classifier_pre.weight', 'classifier_pre.bias', 'inferencer_pre.transition']
+- This IS expected if you are initializing BertCRF from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPretraining model).
+- This IS NOT expected if you are initializing BertCRF from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2020-09-17 20:20:44,191:WARNING: Some weights of BertCRF were not initialized from the model checkpoint at ./pretrained/final_bert_crf/ and are newly initialized: ['classifier.weight', 'classifier.bias', 'inferencer.transition']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+2020-09-17 20:20:44,383:INFO: full finetuning
+2020-09-17 20:20:57,870:INFO: Epoch 1: 25.25985, Time is 13.48s
+2020-09-17 20:20:58,238:INFO: [dev set] Precision: 78.82, Recall: 83.75, F1: 81.21
+2020-09-17 20:20:58,238:INFO: saving the best model...
+2020-09-17 20:21:19,545:INFO: Epoch 2: 1.02295, Time is 13.42s
+2020-09-17 20:21:19,942:INFO: [dev set] Precision: 82.93, Recall: 85.00, F1: 83.95
+2020-09-17 20:21:19,942:INFO: saving the best model...
+2020-09-17 20:21:40,209:INFO: Epoch 3: 0.66876, Time is 13.58s
+2020-09-17 20:21:40,585:INFO: [dev set] Precision: 82.35, Recall: 87.50, F1: 84.85
+2020-09-17 20:21:40,585:INFO: saving the best model...
+2020-09-17 20:22:01,709:INFO: Epoch 4: 0.67088, Time is 13.43s
+2020-09-17 20:22:02,087:INFO: [dev set] Precision: 84.62, Recall: 82.50, F1: 83.54
+2020-09-17 20:22:15,529:INFO: Epoch 5: 0.27963, Time is 13.44s
+2020-09-17 20:22:15,903:INFO: [dev set] Precision: 80.23, Recall: 86.25, F1: 83.13
+2020-09-17 20:22:29,347:INFO: Epoch 6: 0.02619, Time is 13.44s
+2020-09-17 20:22:29,736:INFO: [dev set] Precision: 83.95, Recall: 85.00, F1: 84.47
+2020-09-17 20:22:42,983:INFO: Epoch 7: 0.25305, Time is 13.24s
+2020-09-17 20:22:43,357:INFO: [dev set] Precision: 82.35, Recall: 87.50, F1: 84.85
+2020-09-17 20:22:56,761:INFO: Epoch 8: 0.00404, Time is 13.40s
+2020-09-17 20:22:57,127:INFO: [dev set] Precision: 82.93, Recall: 85.00, F1: 83.95
+2020-09-17 20:23:10,678:INFO: Epoch 9: 0.09734, Time is 13.55s
+2020-09-17 20:23:11,050:INFO: [dev set] Precision: 82.93, Recall: 85.00, F1: 83.95
+2020-09-17 20:23:24,393:INFO: Epoch 10: 0.10463, Time is 13.34s
+2020-09-17 20:23:24,772:INFO: [dev set] Precision: 83.13, Recall: 86.25, F1: 84.66
+2020-09-17 20:23:38,063:INFO: Epoch 11: 0.04164, Time is 13.29s
+2020-09-17 20:23:38,433:INFO: [dev set] Precision: 83.13, Recall: 86.25, F1: 84.66
+2020-09-17 20:23:51,827:INFO: Epoch 12: 0.04048, Time is 13.39s
+2020-09-17 20:23:52,229:INFO: [dev set] Precision: 85.19, Recall: 86.25, F1: 85.71
+2020-09-17 20:23:52,230:INFO: saving the best model...
+2020-09-17 20:24:13,393:INFO: Epoch 13: 0.03449, Time is 13.34s
+2020-09-17 20:24:13,765:INFO: [dev set] Precision: 87.50, Recall: 87.50, F1: 87.50
+2020-09-17 20:24:13,765:INFO: saving the best model...
+2020-09-17 20:24:35,235:INFO: Epoch 14: 0.05662, Time is 13.35s
+2020-09-17 20:24:35,615:INFO: [dev set] Precision: 85.19, Recall: 86.25, F1: 85.71
+2020-09-17 20:24:48,875:INFO: Epoch 15: 0.00184, Time is 13.26s
+2020-09-17 20:24:49,263:INFO: [dev set] Precision: 85.19, Recall: 86.25, F1: 85.71
+2020-09-17 20:24:52,223:INFO: 
+
+2020-09-17 20:24:52,659:INFO: [dev set] Precision: 87.50, Recall: 87.50, F1: 87.50
+2020-09-17 20:24:53,048:INFO: [* trigger *] Precision: 94.44, Recall: 89.47, F1: 91.89
+2020-09-17 20:24:53,049:INFO: [* sub *] Precision: 100.00, Recall: 100.00, F1: 100.00
+2020-09-17 20:24:53,049:INFO: [* obj *] Precision: 66.67, Recall: 70.00, F1: 68.29
+2020-09-17 20:24:53,049:INFO: [* amount *] Precision: 92.31, Recall: 100.00, F1: 96.00
+2020-09-17 20:24:53,049:INFO: [* date *] Precision: 88.89, Recall: 80.00, F1: 84.21
+2020-09-17 20:24:53,050:INFO: 
+
+
+2020-09-17 20:26:31,785:INFO: device: cuda
+2020-09-17 20:26:31,785:INFO: seed: 2020
+2020-09-17 20:26:31,785:INFO: digit2zero: False
+2020-09-17 20:26:31,785:INFO: dataset: data
+2020-09-17 20:26:31,785:INFO: optimizer: sgd
+2020-09-17 20:26:31,785:INFO: learning_rate: 2e-05
+2020-09-17 20:26:31,785:INFO: momentum: 0.0
+2020-09-17 20:26:31,785:INFO: l2: 1e-08
+2020-09-17 20:26:31,785:INFO: lr_decay: 0
+2020-09-17 20:26:31,785:INFO: batch_size: 2
+2020-09-17 20:26:31,785:INFO: num_epochs: 15
+2020-09-17 20:26:31,785:INFO: train_num: -1
+2020-09-17 20:26:31,785:INFO: dev_num: -1
+2020-09-17 20:26:31,785:INFO: num_outer_iterations: 10
+2020-09-17 20:26:31,785:INFO: train_or_predict: 1
+2020-09-17 20:26:31,785:INFO: ensemble: 0
+2020-09-17 20:26:31,785:INFO: bert_model_dir: chinese_roberta_wwm_ext_pytorch
+2020-09-17 20:26:31,785:INFO: max_len: 400
+2020-09-17 20:26:31,785:INFO: full_finetuning: True
+2020-09-17 20:26:31,785:INFO: clip_grad: 5
+2020-09-17 20:26:31,785:INFO: gradient_accumulation_steps: 4
+2020-09-17 20:26:31,785:INFO: model_folder: saved_model_roberta_zb_1_1
+2020-09-17 20:26:31,785:INFO: device_num: 2
+2020-09-17 20:26:31,785:INFO: type: 中标
+2020-09-17 20:26:31,785:INFO: 
+
+2020-09-17 20:26:31,785:INFO: Loading the datasets...
+2020-09-17 20:26:31,927:INFO: Building label idx ...
+2020-09-17 20:26:31,930:INFO: [Training Info] number of instances: 161
+2020-09-17 20:26:35,072:INFO: Initialized from pre-trained Model
+2020-09-17 20:26:35,072:INFO: [Training Info] The model will be saved to: saved_model_roberta_zb_1_1
+2020-09-17 20:26:35,072:INFO: loading weights file ./pretrained/final_bert_crf/pytorch_model.bin
+2020-09-17 20:26:41,989:WARNING: Some weights of the model checkpoint at ./pretrained/final_bert_crf/ were not used when initializing BertCRF: ['classifier_pre.weight', 'classifier_pre.bias', 'inferencer_pre.transition']
+- This IS expected if you are initializing BertCRF from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPretraining model).
+- This IS NOT expected if you are initializing BertCRF from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2020-09-17 20:26:41,989:WARNING: Some weights of BertCRF were not initialized from the model checkpoint at ./pretrained/final_bert_crf/ and are newly initialized: ['classifier.weight', 'classifier.bias', 'inferencer.transition']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+2020-09-17 20:26:42,169:INFO: full finetuning
+2020-09-17 20:26:56,639:INFO: Epoch 1: 25.12044, Time is 14.47s
+2020-09-17 20:26:57,013:INFO: [dev set] Precision: 78.82, Recall: 83.75, F1: 81.21
+2020-09-17 20:26:57,013:INFO: saving the best model...
+2020-09-17 20:27:17,290:INFO: Epoch 2: 1.17875, Time is 13.62s
+2020-09-17 20:27:17,674:INFO: [dev set] Precision: 83.53, Recall: 88.75, F1: 86.06
+2020-09-17 20:27:17,674:INFO: saving the best model...
+2020-09-17 20:27:37,832:INFO: Epoch 3: 1.03236, Time is 13.52s
+2020-09-17 20:27:38,219:INFO: [dev set] Precision: 79.31, Recall: 86.25, F1: 82.63
+2020-09-17 20:27:51,679:INFO: Epoch 4: 0.47145, Time is 13.46s
+2020-09-17 20:27:52,060:INFO: [dev set] Precision: 82.72, Recall: 83.75, F1: 83.23
+2020-09-17 20:28:05,399:INFO: Epoch 5: 0.38055, Time is 13.33s
+2020-09-17 20:28:05,768:INFO: [dev set] Precision: 81.18, Recall: 86.25, F1: 83.64
+2020-09-17 20:28:19,431:INFO: Epoch 6: 0.14013, Time is 13.66s
+2020-09-17 20:28:19,809:INFO: [dev set] Precision: 79.07, Recall: 85.00, F1: 81.93
+2020-09-17 20:28:33,360:INFO: Epoch 7: 0.16644, Time is 13.55s
+2020-09-17 20:28:33,731:INFO: [dev set] Precision: 79.31, Recall: 86.25, F1: 82.63
+2020-09-17 20:28:47,261:INFO: Epoch 8: 0.03606, Time is 13.52s
+2020-09-17 20:28:47,634:INFO: [dev set] Precision: 76.74, Recall: 82.50, F1: 79.52
+2020-09-17 20:29:01,037:INFO: Epoch 9: 0.16374, Time is 13.40s
+2020-09-17 20:29:01,423:INFO: [dev set] Precision: 81.18, Recall: 86.25, F1: 83.64
+2020-09-17 20:29:14,678:INFO: Epoch 10: 0.18559, Time is 13.25s
+2020-09-17 20:29:15,056:INFO: [dev set] Precision: 80.00, Recall: 85.00, F1: 82.42
+2020-09-17 20:29:28,648:INFO: Epoch 11: 0.05377, Time is 13.59s
+2020-09-17 20:29:29,029:INFO: [dev set] Precision: 80.00, Recall: 85.00, F1: 82.42
+2020-09-17 20:29:42,517:INFO: Epoch 12: 0.05708, Time is 13.48s
+2020-09-17 20:29:42,892:INFO: [dev set] Precision: 79.31, Recall: 86.25, F1: 82.63
+2020-09-17 20:29:56,438:INFO: Epoch 13: 0.04364, Time is 13.54s
+2020-09-17 20:29:56,822:INFO: [dev set] Precision: 81.48, Recall: 82.50, F1: 81.99
+2020-09-17 20:30:10,283:INFO: Epoch 14: 0.05217, Time is 13.46s
+2020-09-17 20:30:10,668:INFO: [dev set] Precision: 81.71, Recall: 83.75, F1: 82.72
+2020-09-17 20:30:24,139:INFO: Epoch 15: 0.13536, Time is 13.47s
+2020-09-17 20:30:24,519:INFO: [dev set] Precision: 84.81, Recall: 83.75, F1: 84.28
+2020-09-17 20:30:26,844:INFO: 
+
+2020-09-17 20:30:27,814:INFO: [dev set] Precision: 83.53, Recall: 88.75, F1: 86.06
+2020-09-17 20:30:28,221:INFO: [* trigger *] Precision: 89.47, Recall: 89.47, F1: 89.47
+2020-09-17 20:30:28,221:INFO: [* sub *] Precision: 100.00, Recall: 100.00, F1: 100.00
+2020-09-17 20:30:28,221:INFO: [* obj *] Precision: 62.50, Recall: 75.00, F1: 68.18
+2020-09-17 20:30:28,221:INFO: [* amount *] Precision: 85.71, Recall: 100.00, F1: 92.31
+2020-09-17 20:30:28,221:INFO: [* date *] Precision: 88.89, Recall: 80.00, F1: 84.21
+2020-09-17 20:30:28,223:INFO: 
+
+
+2020-09-17 20:33:24,737:INFO: device: cuda
+2020-09-17 20:33:24,738:INFO: seed: 2020
+2020-09-17 20:33:24,738:INFO: digit2zero: False
+2020-09-17 20:33:24,738:INFO: dataset: data
+2020-09-17 20:33:24,738:INFO: optimizer: sgd
+2020-09-17 20:33:24,738:INFO: learning_rate: 2e-05
+2020-09-17 20:33:24,738:INFO: momentum: 0.0
+2020-09-17 20:33:24,738:INFO: l2: 1e-08
+2020-09-17 20:33:24,738:INFO: lr_decay: 0
+2020-09-17 20:33:24,738:INFO: batch_size: 2
+2020-09-17 20:33:24,738:INFO: num_epochs: 15
+2020-09-17 20:33:24,738:INFO: train_num: -1
+2020-09-17 20:33:24,738:INFO: dev_num: -1
+2020-09-17 20:33:24,738:INFO: num_outer_iterations: 10
+2020-09-17 20:33:24,738:INFO: train_or_predict: 1
+2020-09-17 20:33:24,738:INFO: ensemble: 0
+2020-09-17 20:33:24,738:INFO: bert_model_dir: chinese_roberta_wwm_ext_pytorch
+2020-09-17 20:33:24,738:INFO: max_len: 400
+2020-09-17 20:33:24,738:INFO: full_finetuning: True
+2020-09-17 20:33:24,738:INFO: clip_grad: 5
+2020-09-17 20:33:24,738:INFO: gradient_accumulation_steps: 4
+2020-09-17 20:33:24,738:INFO: model_folder: saved_model_roberta_zb_1_1
+2020-09-17 20:33:24,738:INFO: device_num: 2
+2020-09-17 20:33:24,738:INFO: type: 中标
+2020-09-17 20:33:24,738:INFO: 
+
+2020-09-17 20:33:24,738:INFO: Loading the datasets...
+2020-09-17 20:33:24,863:INFO: Building label idx ...
+2020-09-17 20:33:24,865:INFO: [Training Info] number of instances: 161
+2020-09-17 20:33:27,180:INFO: Initialized from pre-trained Model
+2020-09-17 20:33:27,180:INFO: [Training Info] The model will be saved to: saved_model_roberta_zb_1_1
+2020-09-17 20:33:27,180:INFO: loading weights file ./pretrained/final_bert_crf/pytorch_model.bin
+2020-09-17 20:33:34,409:WARNING: Some weights of the model checkpoint at ./pretrained/final_bert_crf/ were not used when initializing BertCRF: ['classifier_pre.weight', 'classifier_pre.bias', 'inferencer_pre.transition']
+- This IS expected if you are initializing BertCRF from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPretraining model).
+- This IS NOT expected if you are initializing BertCRF from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2020-09-17 20:33:34,409:WARNING: Some weights of BertCRF were not initialized from the model checkpoint at ./pretrained/final_bert_crf/ and are newly initialized: ['classifier.weight', 'classifier.bias', 'inferencer.transition']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+2020-09-17 20:33:34,600:INFO: full finetuning
+2020-09-17 20:33:47,755:INFO: Epoch 1: 25.21771, Time is 13.15s
+2020-09-17 20:33:48,128:INFO: [dev set] Precision: 78.82, Recall: 83.75, F1: 81.21
+2020-09-17 20:33:48,128:INFO: saving the best model...
+2020-09-17 20:34:08,925:INFO: Epoch 2: 1.04356, Time is 13.34s
+2020-09-17 20:34:09,295:INFO: [dev set] Precision: 82.93, Recall: 85.00, F1: 83.95
+2020-09-17 20:34:09,295:INFO: saving the best model...
+2020-09-17 20:34:29,378:INFO: Epoch 3: 0.68058, Time is 13.35s
+2020-09-17 20:34:29,762:INFO: [dev set] Precision: 84.34, Recall: 87.50, F1: 85.89
+2020-09-17 20:34:29,762:INFO: saving the best model...
+2020-09-17 20:34:50,983:INFO: Epoch 4: 0.72635, Time is 13.53s
+2020-09-17 20:34:51,374:INFO: [dev set] Precision: 83.95, Recall: 85.00, F1: 84.47
+2020-09-17 20:35:04,665:INFO: Epoch 5: 0.10906, Time is 13.29s
+2020-09-17 20:35:05,037:INFO: [dev set] Precision: 80.49, Recall: 82.50, F1: 81.48
+2020-09-17 20:35:18,405:INFO: Epoch 6: 0.21545, Time is 13.36s
+2020-09-17 20:35:18,783:INFO: [dev set] Precision: 84.34, Recall: 87.50, F1: 85.89
+2020-09-17 20:35:32,318:INFO: Epoch 7: 0.06906, Time is 13.53s
+2020-09-17 20:35:32,707:INFO: [dev set] Precision: 82.93, Recall: 85.00, F1: 83.95
+2020-09-17 20:35:46,195:INFO: Epoch 8: 0.05501, Time is 13.48s
+2020-09-17 20:35:46,582:INFO: [dev set] Precision: 85.37, Recall: 87.50, F1: 86.42
+2020-09-17 20:35:46,582:INFO: saving the best model...
+2020-09-17 20:36:07,018:INFO: Epoch 9: 0.01777, Time is 13.53s
+2020-09-17 20:36:07,393:INFO: [dev set] Precision: 84.52, Recall: 88.75, F1: 86.59
+2020-09-17 20:36:07,393:INFO: saving the best model...
+2020-09-17 20:36:27,813:INFO: Epoch 10: 0.08465, Time is 13.62s
+2020-09-17 20:36:28,212:INFO: [dev set] Precision: 86.42, Recall: 87.50, F1: 86.96
+2020-09-17 20:36:28,212:INFO: saving the best model...
+2020-09-17 20:36:48,374:INFO: Epoch 11: 0.07482, Time is 13.33s
+2020-09-17 20:36:48,747:INFO: [dev set] Precision: 91.14, Recall: 90.00, F1: 90.57
+2020-09-17 20:36:48,747:INFO: saving the best model...
+2020-09-17 20:37:08,562:INFO: Epoch 12: 0.12352, Time is 13.35s
+2020-09-17 20:37:08,937:INFO: [dev set] Precision: 82.93, Recall: 85.00, F1: 83.95
+2020-09-17 20:37:22,121:INFO: Epoch 13: 0.01705, Time is 13.18s
+2020-09-17 20:37:22,515:INFO: [dev set] Precision: 81.93, Recall: 85.00, F1: 83.44
+2020-09-17 20:37:35,715:INFO: Epoch 14: 0.13191, Time is 13.20s
+2020-09-17 20:37:36,087:INFO: [dev set] Precision: 82.14, Recall: 86.25, F1: 84.15
+2020-09-17 20:37:49,190:INFO: Epoch 15: 0.20566, Time is 13.10s
+2020-09-17 20:37:49,566:INFO: [dev set] Precision: 85.37, Recall: 87.50, F1: 86.42
+2020-09-17 20:37:50,935:INFO: 
+
+2020-09-17 20:37:52,370:INFO: [dev set] Precision: 91.14, Recall: 90.00, F1: 90.57
+2020-09-17 20:37:52,759:INFO: [* trigger *] Precision: 100.00, Recall: 100.00, F1: 100.00
+2020-09-17 20:37:52,760:INFO: [* sub *] Precision: 100.00, Recall: 100.00, F1: 100.00
+2020-09-17 20:37:52,760:INFO: [* obj *] Precision: 70.00, Recall: 70.00, F1: 70.00
+2020-09-17 20:37:52,760:INFO: [* amount *] Precision: 92.31, Recall: 100.00, F1: 96.00
+2020-09-17 20:37:52,760:INFO: [* date *] Precision: 100.00, Recall: 80.00, F1: 88.89
+2020-09-17 20:37:52,762:INFO: 
+
+
