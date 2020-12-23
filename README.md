@@ -10,13 +10,13 @@
 
 ## 硬件条件：GPU显存11G及以上（eg. Nivdia 2080Ti）
 耗时（eg. Nvdia 2080Ti）：
-分类模块——10~15 min
-事件抽取模型（esemble）—— 6~7 hour
+分类模块:10~15 min
+事件抽取模型（esemble）: 6~7 hour
 ## 1.执行分类模型：
 训练集数据路径：code/CCKS-Cls/dataset/trans_train.json
 测试集数据路径：code/CCKS-Cls/dataset/trans_test.json
-cd /code/CCKS-Cls/
-sh classification.sh
+> cd /code/CCKS-Cls/
+> sh classification.sh
 得到分类结果文件:/code/CCKS-Cls/test_output/cls_out_single.csv
 
 > 说明：chinese_roberta_wwm_large_ext_pytorch 预训练模型文件路径 code/CCKS-Cls/pretrained_model/Bert-wwm-ext/
@@ -29,8 +29,8 @@ http://pan.iflytek.com/#/link/9B46A0ABA70C568AAAFCD004B9A2C773
 训练集数据路径：code/data/train/trans_train.json
 以及code/data/train/train_base.json(这个是A榜的训练集，需要加入进来，作为预训练模型的”权重学习资料”)
 测试集数据路径：code/data/dev/trans_test.json
-cd /code/
-sh aug.sh
+> cd /code/
+> sh aug.sh
 根目录得到结果文件 /code/result.json 
 
 > ### 说明：
