@@ -1,7 +1,6 @@
 # CCKS-2020-Task4-
 面向金融领域的小样本跨类迁移事件抽取 第三名 方案及代码
 > ## 我们在 CCKS2020 大会分享的 技术方案PPT分享[于此](https://pan.baidu.com/s/1ulJXAMVZua7lcHy8K57ZMQ)提取码：bfd1 
-## 近期会更新完整复现代码及方案
 
 ## 环境安装
 依赖文件路径code/conda.txt  和  code/pip.txt
@@ -35,7 +34,7 @@ sh aug.sh
 根目录得到结果文件 /code/result.json 
 
 > ### 说明：
-### 1.chinese_roberta_wwm_large_ext_pytorch 预训练模型文件路径 code/chinese_roberta_wwm_ext_pytorch/
+> ### 1.chinese_roberta_wwm_large_ext_pytorch 预训练模型文件路径 code/chinese_roberta_wwm_ext_pytorch/
 > 下载链接：
 http://pan.iflytek.com/#/link/9B46A0ABA70C568AAAFCD004B9A2C773
 提取密码：43eH
@@ -44,11 +43,11 @@ http://pan.iflytek.com/#/link/9B46A0ABA70C568AAAFCD004B9A2C773
 ### 2.迁移权重学习：首先transfer_train_roberta_model_aug.py会利用trans_train.json和train_base.json中所有数据进行预训练模型（roberta）的权重学习，并保存预训练模型的权重参数，作为后续模型训练的基础预训练模型（roberta）权重，参与到后续的学习
 
 ### 3.基础子模型训练：基于第二步学到的预训练权重，transfer_train_roberta_model_ensemble.py依据每个事件抽取框架会生成10个基本模型，存放路径为
-code/saved_model_roberta_db_1_1/esemble
-code/saved_model_roberta_pj_1_1/esemble
-code/saved_model_roberta_qsht_1_1/esemble
-code/saved_model_roberta_sg_1_1/esemble
-code/saved_model_roberta_zb_1_1/esemble
+> code/saved_model_roberta_db_1_1/esemble
+> code/saved_model_roberta_pj_1_1/esemble
+> code/saved_model_roberta_qsht_1_1/esemble
+> code/saved_model_roberta_sg_1_1/esemble
+> code/saved_model_roberta_zb_1_1/esemble
 
 ### 4.投票预测：采用投票基于上述esemble模型进行每个事件的集成预测，生成结果文件result_tmp.json(存放路径为/code/result_tmp.json)
 
