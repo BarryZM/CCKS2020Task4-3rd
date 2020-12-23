@@ -34,7 +34,7 @@ http://pan.iflytek.com/#/link/9B46A0ABA70C568AAAFCD004B9A2C773
 根目录得到结果文件 /code/result.json 
 
 > 说明：
-> ### 1.chinese_roberta_wwm_large_ext_pytorch 预训练模型文件路径 code/chinese_roberta_wwm_ext_pytorch/
+### 1.chinese_roberta_wwm_large_ext_pytorch 预训练模型文件路径 code/chinese_roberta_wwm_ext_pytorch/
 > 下载链接：
 http://pan.iflytek.com/#/link/9B46A0ABA70C568AAAFCD004B9A2C773
 提取密码：43eH
