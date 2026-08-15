@@ -1,3 +1,5 @@
+
+
 # CCKS-2020-Task4
 面向金融领域的小样本跨类迁移事件抽取 第三名 方案及代码
 > ## 我们在 CCKS2020 大会分享的 技术方案PPT分享[于此](https://pan.baidu.com/s/1ulJXAMVZua7lcHy8K57ZMQ)提取码：bfd1 
@@ -50,4 +52,4 @@ http://pan.iflytek.com/#/link/9B46A0ABA70C568AAAFCD004B9A2C773
 
 ### 4.投票预测：采用投票基于上述esemble模型进行每个事件的集成预测，生成结果文件result_tmp.json(存放路径为/code/result_tmp.json)
 
-### 5.统计学修正：code/config/reader.py 中的fix_trigger()方法会使用规则进行各事件的修正（修正原则为统计各事件中trigger在训练集（A榜和B榜）里的集合，对测试集的模型推断结果进行”查漏补缺”）最终生成result.json为提交的测试集最终结果文件。
+### 5.统计学修正：code/config/reader.py 中的fix_trigger()方法会使用规则进行各事件的修正（修正原则为统计各事件中trigger在训练集（A榜和B榜）里的集合，对测试集的模型推断结果进行”查漏补缺”）最终生成result.json为提交的测试集最终结果文件。（aug.sh 最后执行 python3 reader.py）
